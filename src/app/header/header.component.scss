@@ -1,0 +1,40 @@
+nav {
+  font-size: 15px;
+  .name {
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .logo {
+    cursor: pointer;
+  }
+}
+
+.circle {
+  background-color: var(--primary);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+ul {
+  margin-right: 10px;
+  li {
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--lightgray);
+    }
+    transition: background-color 0.4s;
+  }
+}
+
+.separator {
+  li {
+    padding-right: 30px;
+    border-right: 2px solid #ccc;
+  }
+  li:last-child {
+    border-right: 0;
+  }
+}
