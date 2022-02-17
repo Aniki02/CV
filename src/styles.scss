@@ -22,22 +22,27 @@ a {
 
 :root {
   --font-family: "Roboto", sans-serif;
-  --primary: #546de5;
-  --secondary: #778beb;
+  --background-color: #f3f3f3;
+  --primary: #e3a63a;
+  --secondary: #eb4e36;
+  --tertiary: #95d6d9;
   --accent: #e5546d;
   --lightgray: #ddd;
   --text-regular: #444;
+  --circle-radius: 120px;
 }
 
 body {
   font-family: var(--font-family);
+  background-color: var(--background-color);
   color: var(--text-regular);
 }
 
 //layout
 
 .container {
-  max-width: 1200px;
+  max-width: 80%;
+  min-height: 600px;
   display: block;
   margin: auto;
 }
@@ -65,6 +70,10 @@ body {
   align-items: center;
 }
 
+.flex-align-items-end {
+  align-items: flex-end;
+}
+
 .flex-align-items-between {
   align-items: space-between;
 }
@@ -86,6 +95,12 @@ body {
   padding: 20px;
 }
 
+.p50 {
+  padding: 50px;
+}
+.pt30 {
+  padding-top: 30px;
+}
 .m10 {
   margin: 10px;
 }
@@ -98,6 +113,13 @@ body {
   margin-bottom: 20px;
 }
 
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
 .pr10 {
   padding-right: 10px;
 }
@@ -133,18 +155,44 @@ body {
 .btn {
   padding: 10px 15px;
   background-color: white;
-  border: 0;
-  border-radius: 3px;
+  width: var(--circle-radius);
+  height: var(--circle-radius);
+  border-radius: var(--circle-radius) / var(--circle-radius);
   font-weight: 700;
+  border-radius: 50%;
+  border: 1px solid black;
   cursor: pointer;
   &-primary {
     background-color: var(--primary);
     color: white;
     &:hover {
-      background-color: var(--secondary);
+      background-color: white;
+      color: var(--text-regular);
     }
     transition: background-color 0.3s;
   }
+  &-secondary {
+    background-color: var(--secondary);
+    color: white;
+    &:hover {
+      background-color: white;
+      color: var(--text-regular);
+    }
+    transition: background-color 0.3s;
+  }
+  &-tertiary {
+    background-color: var(--tertiary);
+    color: white;
+    &:hover {
+      background-color: white;
+      color: var(--text-regular);
+    }
+    transition: background-color 0.3s;
+  }
+}
+
+.active {
+  background-color: var(--lightgray);
 }
 
 // debug
@@ -155,4 +203,14 @@ body {
 
 .d2 {
   border: 1px solid green;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  width: 97%;
+  margin: auto;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
