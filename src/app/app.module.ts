@@ -10,6 +10,8 @@ import { GreetingComponent } from './greeting/greeting.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ProjectsContainerComponent } from './projects-container/projects-container.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectComponent } from './projects-container/project/project.component';
+import { ProjectListComponent } from './projects-container/project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ContactComponent } from './contact/contact.component';
     ResumeComponent,
     ProjectsContainerComponent,
     ContactComponent,
+    ProjectComponent,
+    ProjectListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
